@@ -25,9 +25,6 @@ $commonScript = <<SCRIPT
    cp $CONFIG_DIR/server.properties $CONFIG_DIR/zookeeper.properties-
    cp $CONFIG_DIR/server.properties $CONFIG_DIR/server.properties-
    
-   # create dir; serverid -> myid 
-   mkdir /tmp/zookeeper
-
    # add config settings to zookeeper.properties
    echo "initLimit=5\nsyncLimit=2" >> $CONFIG_DIR/zookeeper.properties
 
@@ -55,8 +52,8 @@ Vagrant.configure(2) do |config|
        # expose port 388x for zookeeper server to server communication
        node.vm.network "private_network", ip: "192.168.50.1#{i}", netmask: "255.255.255.0", virtualbox__intnet: "kafka-network", drop_nat_interface_default_route: true
        node.vm.hostname = "node-#{i}"
-       # add unique broker id to server.properties
-       # add server id to the myid file 
+       # expose ports for outside clients to connect to kafka
+       node.vm.network "forwarded_port", guest: 9092, host: "909#{i+1}"
        node.vm.provision "shell", inline: "/bin/bash /vagrant/setup.sh #{i}"
     end
   end
