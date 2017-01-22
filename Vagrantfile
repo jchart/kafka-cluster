@@ -6,7 +6,6 @@ $commonScript = <<SCRIPT
    # install base tools 
    sudo yum update -y && yum install -y net-tools wget curl python unzip zip cron vim epel-release git
 
- 
    # private network needs hosts entries
    echo "192.168.50.11 node-1\n192.168.50.12 node-2\n192.168.50.13 node-3" >> /etc/hosts
   
@@ -45,9 +44,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: $commonScript
   config.vm.synced_folder ".", "/vagrant", type: "rsync"
 
-  config.ssh.forward_agent = true # So that boxes don't have to setup key-less ssh
-  config.ssh.insert_key = false # To generate a new ssh key and don't use the default Vagrant one
-
   # define nodes
   (1..3).each do |i|
     config.vm.define "node-#{i}" do |node|
@@ -58,7 +54,6 @@ Vagrant.configure(2) do |config|
        end 
        # expose port 388x for zookeeper server to server communication
        node.vm.network "private_network", ip: "192.168.50.1#{i}", netmask: "255.255.255.0", virtualbox__intnet: "kafka-network", drop_nat_interface_default_route: true
-       #node.vm.network "forwarded_port", guest: 3888, host: "388#{i}"
        node.vm.hostname = "node-#{i}"
        # add unique broker id to server.properties
        # add server id to the myid file 
