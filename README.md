@@ -1,6 +1,13 @@
 # Apache Kafka cluster setup 
 This project creates a three node [Apache Kafaka](https://kafka.apache.org) cluster on a Vagrant provisioned Centos 7 VM. 
 
+# Prerequisites
+* Download and Install <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Virtual Box</a>
+* Download and Install <a href="https://www.vagrantup.com/downloads.html" target="_blank">Vagrant</a>
+* Windows users download and Install <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a>   
+    when prompted:
+      * Select 'Use Git from Git Bash Only'   
+      * Select 'Check out as-is, commit as-is'
 
 ```ShellSession
 git clone https://github.com/PaulSRusso/kafka-cluster.git
