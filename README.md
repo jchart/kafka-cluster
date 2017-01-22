@@ -9,8 +9,7 @@ vagrant up
 ```
 
 A private network is created   
-host | ip | exposed port   
----|---|---   
+host   | ip            | exposed port   
 node-1 | 192.168.50.11 | 9091  
 node-2 | 192.168.50.12 | 9092   
 node-3 | 192.168.50.13 | 9093   
