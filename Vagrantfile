@@ -22,7 +22,7 @@ $commonScript = <<SCRIPT
    
    # back up config files 
    CONFIG_DIR=/opt/kafka/config
-   cp $CONFIG_DIR/server.properties $CONFIG_DIR/zookeeper.properties-
+   cp $CONFIG_DIR/zookeeper.properties $CONFIG_DIR/zookeeper.properties-
    cp $CONFIG_DIR/server.properties $CONFIG_DIR/server.properties-
    
    # add config settings to zookeeper.properties
