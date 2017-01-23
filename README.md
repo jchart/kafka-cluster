@@ -71,11 +71,9 @@ added server info
     server.3=192.168.50.13:2888:3888
 ```
 2. replaced entry in /opt/kafka/config/**server.properties**  
-replaced
 ``` 
+replaced
    zookeeper.connect=localhost
-```
 with
-```
    zookeeper.connect=192.168.50.11:2181,192.168.50.12:2181,192.168.50.13:2181
 ```
