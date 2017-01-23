@@ -13,10 +13,14 @@ This project creates a three node [Apache Kafaka](https://kafka.apache.org) clus
 ```ShellSession
 git clone https://github.com/PaulSRusso/kafka-cluster.git
 cd kafka-cluster
+```
 
-Windows users need to modifiy the **Vagrantfile**
+Windows users:  modifiy the **Vagrantfile**
+
+```ShellSession
 # Windows users -- uncomment line below 
-#  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+#  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+```
 
 vagrant up
 ```
