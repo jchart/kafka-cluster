@@ -20,7 +20,6 @@ Windows users:  modifiy the **Vagrantfile**
 ```ShellSession
 # Windows users -- uncomment line below 
 #  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
-```
 
 vagrant up
 ```
