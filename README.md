@@ -73,8 +73,13 @@ added server info
 ```
 * **server.properties**  
 ``` 
+broker.id=1 (incremented by one for each server. It must be unique per server)
+
 replaced
    zookeeper.connect=localhost
 with
    zookeeper.connect=192.168.50.11:2181,192.168.50.12:2181,192.168.50.13:2181
+
+increased zookeeper connection timeout to 10 minutes to allow server provision time
+   zookeeper.connection.timeout.ms=600000
 ```
