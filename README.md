@@ -58,8 +58,6 @@ Hello Kafka
 [ctrl-c]
 ```
 ### Customizations made
-1. Kafka is installed in /opt/kafka
-
 **/opt/kafka/config/**
 
 * **zookeeper.properties**
