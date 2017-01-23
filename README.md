@@ -60,16 +60,15 @@ Hello Kafka
 ### Customizations made
 1. Kafka is installed in /opt/kafka
 2. appended entries to /opt/kafka/config/**zookeeper.properties**
-   * added config settings
-```
-     initLimit=5
-     nsyncLimit=2
-```
-   * added server info
-```   
-     server.1=192.168.50.11:2888:3888  
-     server.2=192.168.50.12:2888:3888  
-     server.3=192.168.50.13:2888:3888
+```  
+added config settings
+    initLimit=5
+    nsyncLimit=2
+
+added server info
+    server.1=192.168.50.11:2888:3888  
+    server.2=192.168.50.12:2888:3888  
+    server.3=192.168.50.13:2888:3888
 ```
 2. replaced entry in /opt/kafka/config/**server.properties**  
 replaced
