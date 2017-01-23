@@ -4,7 +4,8 @@ SERVER_NUM=$1
 # set environment
 . /vagrant/.bashrc
 cp /vagrant/.bashrc /home/vagrant
-cp /vagrant/.bashrc /root# every broker has a unique id
+cp /vagrant/.bashrc /root
+# every broker has a unique id
 sed -i "s/broker.id=0/broker.id=$SERVER_NUM/" /opt/kafka/config/server.properties 
 
 # set timeout to 10 minutes - allow other servers to start
