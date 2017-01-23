@@ -83,3 +83,4 @@ with
 increased zookeeper connection timeout to 10 minutes to allow server provision time
    zookeeper.connection.timeout.ms=600000
 ```
+created this file containing a uniquie server id **/tmp/zookeeper/myid** 
