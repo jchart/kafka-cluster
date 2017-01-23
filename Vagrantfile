@@ -40,6 +40,9 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.provision "shell", inline: $commonScript
 
+  # Windows users -- uncomment line below 
+  # config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+  
   # define nodes
   (1..3).each do |i|
     config.vm.define "node-#{i}" do |node|
