@@ -9,13 +9,14 @@ This project creates a three node [Apache Kafaka](https://kafka.apache.org) clus
       * Select 'Use Git from Git Bash Only'   
       * Select 'Check out as-is, commit as-is'
 
+### Commands
 ```ShellSession
 git clone https://github.com/PaulSRusso/kafka-cluster.git
 cd kafka-cluster
 vagrant up
 ```
 
-A private network is created   
+### A private network is created   
 node-1 | 192.168.50.11 | 9091  
 node-2 | 192.168.50.12 | 9092   
 node-3 | 192.168.50.13 | 9093   
