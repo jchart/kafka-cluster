@@ -39,7 +39,6 @@ SCRIPT
 Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.provision "shell", inline: $commonScript
-  config.vm.synced_folder ".", "/vagrant", type: "rsync"
 
   # define nodes
   (1..3).each do |i|
