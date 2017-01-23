@@ -46,7 +46,7 @@ Hello Kafka
 [ctrl-c]
 ```
 
-### Recieve the same message in the other two nodes
+### Terminals 2 & 1: Recieve the same message in the other two nodes
 ```ShellSession
 vagrant ssh node-2
 [vagrant@node-2:~] consumer.sh topic1
