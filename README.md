@@ -21,9 +21,7 @@ node-1 | 192.168.50.11 | 9091
 node-2 | 192.168.50.12 | 9092   
 node-3 | 192.168.50.13 | 9093   
 
-### Testing the system...
-
-### Open three terminals 
+### To Test the system open three separate terminals
 
 ### Terminal 1: Create a topic in node-1
 ```ShellSession
@@ -59,3 +57,16 @@ vagrant ssh node-1
 Hello Kafka 
 [ctrl-c]
 ```
+### Customizations made
+1. Kafka is installed in /opt/kafka
+2. appended entries to /opt/kafka/config/zookeeper.properties
+   * added config settings
+     *  initLimit=5
+     *  nsyncLimit=2
+   * added server info
+     * server.1=192.168.50.11:2888:3888  
+     * server.2=192.168.50.12:2888:3888  
+     * server.3=192.168.50.13:2888:3888
+2. replaced entry in /opt/kafka/config/server.properties
+   * zookeeper.connect=localhost was replaced with 
+   * zookeeper.connect=192.168.50.11:2181,192.168.50.12:2181,192.168.50.13:2181
