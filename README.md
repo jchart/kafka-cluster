@@ -24,13 +24,13 @@ node-3 | 192.168.50.13 | 9093
 
 ### Open three terminals 
 
-### Create a topic in node-1
+### Terminal 1: Create a topic in node-1
 ```ShellSession
 vagrant ssh node-1
 [vagrant@node-1:~] create-topic.sh topic1
 ```
 
-### Produce a message in node-2
+### Terminal 2: Produce a message in node-2
 ```ShellSession
 vagrant ssh node-2
 [vagrant@node-2:~] producer.sh topic1
@@ -38,7 +38,7 @@ Hello Kafka
 [ctrl-c]
 ```
 
-### Recieve the message in node-3
+### Terminal 3: Recieve the message in node-3
 ```ShellSession
 vagrant ssh node-3
 [vagrant@node-3:~] consumer.sh topic1
