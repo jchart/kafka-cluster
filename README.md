@@ -1,7 +1,7 @@
 # Apache Kafka cluster setup 
 This project creates a three node [Apache Kafaka](https://kafka.apache.org) cluster on a Vagrant provisioned Centos 7 VM. 
 * Twitter: [@PaulSRusso](https://twitter.com/@PaulSRusso)
-* View [My Projects](https://paulsrusso.github.io/docs)
+* View [My Projects](https://paulsrusso.github.io)
 
 # Prerequisites
 * Download and Install <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Virtual Box</a>
